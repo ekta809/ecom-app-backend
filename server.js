@@ -1,7 +1,10 @@
 const express =  require("express"); 
 const products = require('./db/products');
+const cors = require("cors");
+
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 app.get("/" , (req, res)=>{
